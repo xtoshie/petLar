@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-bar">
+            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
+            <div id="menu" class="nav-list"></div>
+        </nav>
+
+        <nav class="nav-bar">
+            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
+            <div id="cpfmask" class="nav-list"></div>
+        </nav>
+
+        <nav class="nav-bar">
+            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
+            <div id="cepmask" class="nav-list"></div>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Cadastro de voluntários</h1>
+            <form action="#" method="post">
+                <label for="Nome">Nome:</label>
+                <input type="text" id="Nome" name="Nome" required>
+
+                <label for="Email">E-mail:</label>
+                <input type="email" id="Email" name="Email" required>
+
+                <label for="Telefone">Telefone:</label>
+                <input type="tel" id="Telefone" name="Telefone" required>
+
+                <label for="Nascimento">Data de Nascimento:</label>
+                <input type="date" id="Nascimento" name="Nascimento" required>
+
+                <label for="CPF">CPF:</label>
+                <input type="text" id="CPF" name="CPF" required maxlength="14" placeholder="000.000.000-00">
+
+                <label for="Endereco">Endereço:</label>
+                <input type="text" id="Endereco" name="Endereco" required>
+
+                <label for="CEP">CEP:</label>
+                <input type="text" id="CEP" name="CEP" required maxlength="9" placeholder="00000-000">
+
+                <label for="Cidade">Cidade:</label>
+                <input type="text" id="Cidade" name="Cidade" required>
+
+                <label for="Estado">Estado:</label>
+                <input type="text" id="Estado" name="Estado" required>
+
+                <input type="submit" value="Cadastrar">
+            </form>
+    </main>
+    <script src="../javascript/menu.js"></script>
+    <script src="../javascript/cpfmask.js"></script>
+    <script src="../javascript/cep.js"></script>
+
+    <nav>
+        <div id="footer">
+            <footer>
+                <script src="../javascript/footer.js"></script>
+            </footer>
+        </div>
+    </nav>
+</body>
+</html>
