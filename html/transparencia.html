@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">   <!-- Link para o arquivo CSS -->
+  <title>Portal Transparência - PetLar</title>
+</head>
+<body class="transparencia">
+  <header>
+    <header>
+        <nav class="nav-bar">
+            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
+            <div id="menu" class="nav-list">
+
+            </div>
+        </nav>
+    </header>
+
+    <h1>Portal Transparência - PetLar</h1>
+
+  </header>
+  <main>
+    <p>Dados financeiros fictícios (2012–2024). Os valores são em reais (R$).</p>
+
+    <section class="charts" aria-labelledby="doacoes-title">
+      <h2 id="doacoes-title">Doações anuais (2012–2024)</h2>
+      <canvas id="donationsChart" width="800" height="300" aria-label="Gráfico de doações anuais"></canvas>
+
+      <h2>Despesas por categoria (exemplo anual)</h2>
+      <canvas id="expensesChart" width="800" height="300" aria-label="Gráfico de despesas por categoria"></canvas>
+    </section>
+
+    <section aria-labelledby="table-title">
+      <h2 id="table-title">Resumo de valores por ano</h2>
+      <div id="summaryTable"></div>
+      <div class="download">
+        <a href="../relatorios/doacoes_2012_2024.csv" download>Baixar CSV de doações</a> |
+        <a href="../relatorios/despesas_2012_2024.csv" download>Baixar CSV de despesas</a>
+      </div>
+    </section>
+
+  </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!-- Biblioteca Chart.js para gráficos -->
+    <script src="../javascript/transparencia.js"></script>  <!-- Script para o portal de transparência -->
+    <script src="../javascript/menu.js"></script>   <!-- Script para injetar o menu de navegação -->
+</body>
+</html>
