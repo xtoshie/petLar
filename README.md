@@ -1,3 +1,8 @@
+[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
+[![HTML](https://img.shields.io/badge/feito%20com-HTML5-orange)]()
+[![CSS](https://img.shields.io/badge/feito%20com-CSS3-blueviolet)]()
+[![JavaScript](https://img.shields.io/badge/feito%20com-JavaScript-blue)]()
+
 # 🐾 PetLar — Projeto HTML5
 
 ## 📌 Etapas de Desenvolvimento (em ordem cronológica)
