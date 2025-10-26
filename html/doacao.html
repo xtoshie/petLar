@@ -5,36 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doação</title>
     <link rel="stylesheet" href="../css/estilo.css">
-    
 </head>
-    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 <body>
+    <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
     <header>
+        <!--Menu injetado por javascript -->
         <nav class="nav-bar">
-            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
-            <div id="menu" class="nav-list">
-
-            </div>
+            <div id="menu" class="nav-list"></div>
         </nav>
     </header>
-    <main class="conteudo">
+
     <main id="main-content" class="conteudo">
+        <section class="doacao-intro">
             <h1>Faça uma Doação</h1>
             <p>Obrigado por considerar fazer uma doação para apoiar nossos projetos sociais. Sua contribuição é fundamental para continuarmos nosso trabalho em prol dos animais.</p>
         </section>
+
+        <section class="formas-doacao">
             <h2>Formas de Doação</h2>
-            <p>Doação Única: Você pode fazer uma doação única de qualquer valor.</p>
+            <p><strong>Doação Única:</strong> Você pode fazer uma doação única de qualquer valor.</p>
+            <p><strong>Doação Mensal:</strong> Torne-se um padrinho/madrinha apoiando mensalmente nosso trabalho.</p>
+        </section>
+
+    <section class="fazer-doacao-card">
             <h2>Faça sua doação</h2>
-            <form action="#" method="post">
+            <form action="#" method="post" class="form-doacao" id="doacaoForm">
                 <fieldset>
                     <label for="nome">Nome Completo:</label>
                     <input type="text" id="nome" name="nome" required>
+
                     <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" required>
                 </fieldset>
+
                 <fieldset>
                     <label for="valor">Valor da Doação (R$):</label>
                     <input type="number" id="valor" name="valor" min="1" step="0.01" required>
+
                     <label for="metodo">Método de Pagamento:</label>
                     <select id="metodo" name="metodo" required>
                         <option value="">Selecione</option>
@@ -43,12 +50,55 @@
                         <option value="boleto">Boleto Bancário</option>
                     </select>
                 </fieldset>
-                <input type="submit" value="Doar Agora">
+
+                                <input type="submit" value="Doar Agora" class="botao-doar">
             </form>
+        </section>
     </main>
-    
+
     <script src="../javascript/menu.js"></script>
-    
+        <script>
+            // Intercepta o submit do formulário de doação, salva localmente e redireciona para a página de sucesso
+            (function () {
+                const form = document.getElementById('doacaoForm');
+                if (!form) return;
+                form.addEventListener('submit', function (ev) {
+                    ev.preventDefault();
+                    try {
+                        const nome = document.getElementById('nome').value.trim();
+                        const email = document.getElementById('email').value.trim();
+                        const valor = document.getElementById('valor').value;
+                        const metodo = document.getElementById('metodo').value;
+                        const donation = {
+                            nome: nome,
+                            email: email,
+                            valor: Number(valor),
+                            metodo: metodo,
+                            date: new Date().toLocaleString()
+                        };
+
+                        // salva array de doações em localStorage (persistente)
+                        try {
+                            const key = 'petlar_donations';
+                            const raw = localStorage.getItem(key);
+                            const arr = raw ? JSON.parse(raw) : [];
+                            arr.push(donation);
+                            localStorage.setItem(key, JSON.stringify(arr));
+                        } catch (e) { /* se localStorage falhar, seguimos sem bloquear */ }
+
+                        // salva a última doação em sessionStorage para exibir na tela de sucesso
+                        try { sessionStorage.setItem('last_donation', JSON.stringify(donation)); } catch (e) { /* ignore */ }
+
+                        // redireciona para página de sucesso
+                        window.location.href = 'sucesso_doacao.html';
+                    } catch (e) {
+                        // no erro, permite o comportamento padrão
+                        form.submit();
+                    }
+                });
+            })();
+        </script>
+
     <nav>
         <div id="footer">
             <footer>

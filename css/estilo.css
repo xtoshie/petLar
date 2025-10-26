@@ -1118,6 +1118,24 @@ main.conteudo table tbody tr:last-child td {
   }
 }
 
+/* ===== Estilos para página de sucesso de doação (moved from inline) ===== */
+.resumo-doacao {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.resumo-doacao dt {
+  font-weight: 600;
+  color: #1f6fb2;
+}
+.resumo-doacao dd {
+  margin: 0 0 12px 0;
+  color: #333333;
+}
+
 /* ========= Estilos para Galeria de Imagens ========= */
 /* Container da galeria */
 .container-galeria {
@@ -1289,6 +1307,121 @@ section.galeria {
   .item-galeria {
     height: 120px; /* Altura ainda menor */
   }
+}
+
+/* ===== Ajustes específicos para a página de Doação ===== */
+/* Faz o quadro de doação legível e com largura adequada */
+.fazer-doacao {
+  background: #ffffff; /* Fundo branco para alto contraste */
+  color: #1b1d1f; /* Texto escuro legível */
+  padding: 32px; /* Espaçamento interno confortável */
+  border-radius: 16px; /* Cantos arredondados */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* Sombra suave */
+  max-width: 100%; /* Ocupa todo o espaço possível dentro do main */
+  margin: 0 auto 20px; /* Centraliza e adiciona espaço inferior */
+}
+
+.fazer-doacao h2 {
+  color: #1f6fb2; /* Mantém subtítulo com cor do tema */
+  margin-top: 0.25rem;
+}
+
+.fazer-doacao p {
+  margin-left: 0; /* Remove recuo aplicado globalmente em <p> */
+  margin-right: 0;
+  text-align: left; /* Melhor leitura para formulários e instruções */
+  color: #333333;
+}
+
+/* Formulário dentro do quadro: ocupa largura do body, mas respeita limites */
+.form-doacao {
+  max-width: 900px;
+  width: 100%;
+  margin: 20px auto 0;
+  background: transparent; /* Já tem background no .fazer-doacao */
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Harmoniza o botão de doação com os demais botões do site (ex: .botaoGaleria) */
+.botao-doar,
+input[type="submit"].botao-doar {
+  display: block;
+  margin: 24px auto 0; /* centraliza horizontalmente e separa do formulário */
+  background: linear-gradient(to right, #1f6fb2, #3aaed8);
+  color: #ffffff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+  transition: all 0.25s ease;
+  cursor: pointer;
+  max-width: 260px;
+  text-align: center;
+}
+
+.botao-doar:hover,
+input[type="submit"].botao-doar:hover {
+  background: linear-gradient(to right, #3aaed8, #1f6fb2);
+  transform: translateY(-2px);
+}
+
+/* Em mobile, o botão ocupa a largura disponível de forma elegante */
+@media (max-width: 768px) {
+  .botao-doar, input[type="submit"].botao-doar {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* ===== Override específico para o card de Doação (evita conflito com classe de botão) ===== */
+section.fazer-doacao-card {
+  background: #ffffff; /* Fundo branco para alto contraste */
+  color: #1b1d1f; /* Texto escuro legível */
+  padding: 32px; /* Espaçamento interno confortável */
+  border-radius: 16px; /* Cantos arredondados */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08); /* Sombra suave */
+  max-width: 100%; /* Ocupa todo o espaço possível dentro do main */
+  margin: 0 auto 20px; /* Centraliza e adiciona espaço inferior */
+}
+
+/* Remove qualquer transformação/hover aplicado por classes com menor especificidade */
+section.fazer-doacao-card:hover {
+  transform: none !important;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08) !important;
+}
+
+/* Garantir que o formulário dentro do card ocupe a largura disponível */
+section.fazer-doacao-card .form-doacao {
+  max-width: none;
+  width: 100%;
+  margin: 0; /* Já gerenciado pelo card */
+  padding: 0; /* Formulário interno não precisa de padding extra (o card já tem) */
+  background: transparent;
+  box-shadow: none;
+}
+
+/* Ajuste específico para o elemento <form> (quando não há wrapper) */
+section.fazer-doacao-card form {
+  max-width: none;
+  width: 100%;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
+
+/* Garante que os fieldsets não fiquem muito largos e preservam espaçamento interno */
+section.fazer-doacao-card fieldset {
+  padding: 18px;
+}
+
+/* Botão: já harmonizado, mas garantir ausência de hover inesperado no card */
+section.fazer-doacao-card .botao-doar,
+section.fazer-doacao-card input[type="submit"].botao-doar {
+  margin: 20px auto 0;
 }
 
 
