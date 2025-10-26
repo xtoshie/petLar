@@ -6,6 +6,64 @@
   font-family: 'Poppins', sans-serif; /* Define a fonte padrão do site */
 }
 
+/* Accessibility helpers: skip link, focus styles, color vars, dark/high-contrast */
+/* Skip link — visível apenas quando em foco para permitir navegação por teclado */
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus{
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: auto;
+  height: auto;
+  padding: .5rem 1rem;
+  background: #000;
+  color: #fff;
+  z-index: 9999;
+  border-radius: 4px;
+}
+
+/* Foco visível para navegação por teclado */
+*:focus{
+  outline: 3px solid #ffb400; /* cor de destaque acessível */
+  outline-offset: 2px;
+}
+
+/* Variáveis de cor e suporte a dark/high-contrast */
+:root{
+  --bg: #ffffff;
+  --fg: #222222;
+  --accent: #0a6;
+  --muted: #666666;
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0b0b;
+    --fg: #f0f0f0;
+    --accent: #35a;
+    --muted: #999999;
+  }
+}
+
+/* Classe que ativa alto contraste — altera cores para alto contraste */
+.high-contrast, .high-contrast body{
+  background: #000 !important;
+  color: #fff !important;
+}
+
+/* Modo escuro (classe aplicada no <html>) */
+.dark-mode{
+  --bg: #0b0b0b;
+  --fg: #f0f0f0;
+}
+
 /* Remove espaçamento no topo da página */
 body {
   margin: 0; /* Remove margem do body */

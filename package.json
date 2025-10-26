@@ -1,0 +1,14 @@
+{
+  "name": "petlar",
+  "version": "1.0.0",
+  "description": "Projeto PetLar - site estático (HTML/CSS/JS)",
+  "scripts": {
+    "build:js": "echo \"No build configured for JS; add esbuild or rollup as needed\"",
+    "build:css": "echo \"No CSS build configured; add postcss if desired\"",
+    "build:html": "echo \"No HTML minifier configured\"",
+    "build": "npm run build:js && npm run build:css && npm run build:html"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "MIT"
+}
