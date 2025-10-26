@@ -370,6 +370,34 @@ hr.video{
   margin-right: auto; /* Centraliza o botão horizontalmente */
 }
 
+/* ===== Botões de redes sociais na página de contato ===== */
+.social-list { list-style: none; padding-left: 0; margin: 0 0 0 0; max-width: 720px; }
+.social-list li { margin: 8px 0; }
+.botao-social {
+  display: inline; /* parecer um hyperlink simples */
+  background: transparent !important; /* sem fundo */
+  color: #1f6fb2; /* cor do tema para consistência */
+  padding: 0; /* sem padding, parece texto normal */
+  margin: 6px 0; /* espaço vertical entre itens */
+  border: none; /* remove borda */
+  box-shadow: none; /* remove sombra */
+  text-decoration: none; /* sem underline por padrão */
+  font-weight: 600; /* mantém leve destaque */
+  text-align: left; /* alinhamento do conteúdo */
+}
+.botao-social:hover {
+  text-decoration: underline; /* hover comporta-se como link */
+}
+.botao-social:focus, .botao-social:focus-visible {
+  outline: 3px solid rgba(31,111,178,0.9);
+  outline-offset: 2px;
+}
+
+/* Garantir que o bloco social fique alinhado à esquerda do conteúdo principal */
+.contato-info { max-width: 900px; margin: 0 auto; }
+.contato-info ul { padding-left: 0; }
+.contato-info li { list-style: none; }
+
 .relatorio-anual:hover { /* Efeito hover, hover destaca o botão quando o mouse está sobre ele */
   background: linear-gradient(to right, #3aaed8, #1f6fb2); /* Inverte o gradiente no hover */
   transform: translateY(-2px);  /* Leve elevação ao passar o mouse */
