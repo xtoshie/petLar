@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <title>Galeria - PetLar</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
@@ -14,8 +14,10 @@
             </div>
         </nav>
     </header>
-    <main>
-        <h1>Galeria de Imagens</h1>
+    <main class="conteudo">
+        <section class="galeria-intro">
+            <h1>Galeria de Imagens</h1>
+        </section>
         <div class="container-galeria">
             <section class="galeria">
                 <img src="../imagens/001.png" alt="Imagem 1" class="item-galeria">
@@ -42,14 +44,24 @@
             </section>
         </div>
     </main>
-        <script src="../javascript/menu.js"></script>
-        
-        
 
-        <div class="footer">
+    <!-- Lightbox para visualizar imagens em tamanho grande -->
+    <div id="lightbox" aria-hidden="true" role="dialog" aria-label="Visualização de imagem">
+        <div class="lightbox__content">
+            <button class="lightbox__close" data-close aria-label="Fechar">&times;</button>
+            <img class="lightbox__img" src="" alt="">
+        </div>
+    </div>
+    
+    <script src="../javascript/lightbox.js"></script>
+    <script src="../javascript/menu.js"></script>
+    
+    <nav>
+        <div id="footer">
             <footer>
                 <script src="../javascript/footer.js"></script>
             </footer>
         </div>
+    </nav>
 </body>
 </html>

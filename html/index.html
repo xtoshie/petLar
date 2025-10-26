@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
     <title>PetLar</title>
+    <link rel="stylesheet" href="../css/estilo.css">
 </head>
 <body>
     <header>
+        <!--Adicionei o menu e o footer via javascript pois é muito chato ficar copiando sempre todo esse menu em todas as paginas-->
         <nav class="nav-bar">
             <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
-            <div id="menu" class="nav-list">
-
-            </div>
+            <div id="menu" class="nav-list"></div>
         </nav>
+        
     </header>
+
+    <main class="conteudo">
+
         <section class="video">
+            <h1 class="video">Vídeo institucional</h1>
             <video class="video" controls width="500" autoplay muted>
-                <source src="../videos/Resgates ‐ Feito Com O Clipchamp.mp4" type="video/mp4">
+                    <source src="../videos/Resgates‐FeitoComoClipchamp.mp4" type="video/mp4">
                 Seu navegador não suporta a tag de vídeo.
             </video>
         </section>
-
-    <main>
-        <h1>🐾 Sobre a PetLar</h1>
+ 
+        <h1 class="petLar">🐾 Sobre a PetLar</h1>
+        
+        <div class="sobrePetLar">
             <h2>🌟 Nossa História</h2>
                 <p>
                     A PetLar nasceu em 2012, quando um grupo de voluntários apaixonados por animais se uniu para transformar a realidade de pets abandonados em Sumaré, São Paulo. Tudo começou com resgates informais e campanhas de adoção em praças públicas. Com o tempo, a iniciativa cresceu e se tornou uma ONG reconhecida por seu compromisso com o bem-estar animal e a educação comunitária.
                     Hoje, a PetLar é referência regional em acolhimento, reabilitação e adoção responsável de cães e gatos. Com uma rede de voluntários, veterinários e apoiadores, já ajudamos mais de 4.000 animais a encontrarem um novo lar cheio de amor.
                 </p>
+        </div>
 
-       <img src="../imagens/001.png" alt="001" class="001">
+       <img src="../imagens/001.png" alt="001" class="imagem-index">
 
-       <p><a href="../html/galeria.html">Para mais imagens, visite nossa galeria</a></p>
+       <p><a href="../html/galeria.html" class="botaoGaleria">Para mais imagens, visite nossa galeria</a></p>
 
         <section class="missao">
             <h2>🎯 Missão</h2>
@@ -73,7 +79,7 @@
 
         <section class="equipe">
         <h2>👥 Equipe e Estrutura Organizacional</h2>
-        A PetLar é formada por uma equipe multidisciplinar:
+        <p>A PetLar é formada por uma equipe multidisciplinar:</p>
         <ul>
             <li>Diretoria Executiva: responsável pela gestão estratégica.</li>
             <li>Coordenação de Adoção: organiza feiras e entrevistas com adotantes.</li>
@@ -94,16 +100,16 @@
                     <li>Portal da Transparência: acessível no site oficial, com atualizações trimestrais.</li>
                     <li>Auditoria Independente: realizada por empresa parceira desde 2022.</li>
                 </ul>
-                <section class="relatorios">
-                    <h3>Relatórios Disponíveis</h3>
-                    <ul>
-                        <li><a href="../relatorios/relatorio_anual_2024.pdf">Relatório Anual 2024</a></li>
-                        <li><a href="../html/transparencia.html">Portal da Transparência</a></li>
-                    </ul>
+            </section>
+
+            <section class="relatorios">
+                <h3>Relatórios Disponíveis</h3>
+                    <div><a href="../relatorios/relatorio_anual_2024.pdf" class="relatorio-anual"  target="_blank">Relatório Anual 2024</a></div>
+                    <br>
+                    <div><a href="../html/transparencia.html" class="transparencia">Portal da Transparência</a></div>
                 </section>
-        </section>
     </main>
-    <!-- Caminho relativo ajustado: a partir de html/index.html para a pasta JavaScript acima -->
+    
     <script src="../javascript/menu.js"></script>
     
     <nav>

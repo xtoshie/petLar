@@ -3,32 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css">   <!-- Link para o arquivo CSS -->
   <title>Portal Transparência - PetLar</title>
+  <link rel="stylesheet" href="../css/estilo.css">
 </head>
-<body class="transparencia">
+<body>
   <header>
-    <header>
-        <nav class="nav-bar">
-            <!-- O script JS espera um elemento com id="menu" para injetar o menu -->
-            <div id="menu" class="nav-list">
-
-            </div>
-        </nav>
-    </header>
-
-    <h1>Portal Transparência - PetLar</h1>
-
+    <nav class="nav-bar">
+      <div id="menu" class="nav-list"></div>
+    </nav>
   </header>
-  <main>
+  
+  <main class="conteudo">
+    <h1>Portal Transparência - PetLar</h1>
     <p>Dados financeiros fictícios (2012–2024). Os valores são em reais (R$).</p>
 
     <section class="charts" aria-labelledby="doacoes-title">
       <h2 id="doacoes-title">Doações anuais (2012–2024)</h2>
-      <canvas id="donationsChart" width="800" height="300" aria-label="Gráfico de doações anuais"></canvas>
+      <canvas id="donationsChart" width="800" height="300" aria-labelledby="doacoes-title"></canvas>
 
-      <h2>Despesas por categoria (exemplo anual)</h2>
-      <canvas id="expensesChart" width="800" height="300" aria-label="Gráfico de despesas por categoria"></canvas>
+      <h2 id="despesas-title">Despesas por categoria (exemplo anual)</h2>
+      <canvas id="expensesChart" width="800" height="300" aria-labelledby="despesas-title"></canvas>
     </section>
 
     <section aria-labelledby="table-title">
@@ -39,10 +33,18 @@
         <a href="../relatorios/despesas_2012_2024.csv" download>Baixar CSV de despesas</a>
       </div>
     </section>
-
   </main>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>   <!-- Biblioteca Chart.js para gráficos -->
-    <script src="../javascript/transparencia.js"></script>  <!-- Script para o portal de transparência -->
-    <script src="../javascript/menu.js"></script>   <!-- Script para injetar o menu de navegação -->
+  
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../javascript/transparencia.js"></script>
+  <script src="../javascript/menu.js"></script>
+    
+  <nav>
+    <div id="footer">
+      <footer>
+        <script src="../javascript/footer.js"></script>
+      </footer>
+    </div>
+  </nav>
 </body>
 </html>

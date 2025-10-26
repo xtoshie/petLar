@@ -1,4 +1,3 @@
-[![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)]()
 [![HTML](https://img.shields.io/badge/feito%20com-HTML5-orange)]()
 [![CSS](https://img.shields.io/badge/feito%20com-CSS3-blueviolet)]()
 [![JavaScript](https://img.shields.io/badge/feito%20com-JavaScript-blue)]()
@@ -36,7 +35,7 @@ PetLar/
 ---
 
 ### 3. Estilização com CSS
-- Criar o arquivo `style.css` e aplicar:
+- Criar o arquivo `estilo.css` e aplicar:
 - Layout responsivo.
 - Cores e fontes agradáveis.
 - Estilo para botões, formulários e navegação.
@@ -85,5 +84,16 @@ PetLar/
 - HTML validado e funcional.
 - Imagens otimizadas.
 - Link público do repositório GitHub.
+
+---
+
+Nota sobre CSS e assets
+- Os links para `css/estilo.css` foram removidos propositalmente das páginas em `html/`. Se quiser restaurar o estilo, crie a pasta `css/` na raiz e adicione `estilo.css`, ou ajuste os caminhos nos arquivos HTML conforme sua estrutura.
+- Recomendo, no futuro, adicionar versões otimizadas das imagens (WebP e/ou JPEG) ao lado dos arquivos atuais para melhorar desempenho. Posso automatizar essa conversão se desejar.
+
+Como testar localmente (recomendado)
+- Recomendamos usar a extensão Live Server do Visual Studio Code para testar o site localmente. Após instalar a extensão, abra a pasta do projeto no VS Code, abra qualquer arquivo HTML dentro da pasta `html` e clique em "Go Live" (botão na barra de status). O Live Server irá servir os arquivos via HTTP e você poderá acessar, por exemplo:
+	- http://127.0.0.1:5500/html/index.html
+
 
 
