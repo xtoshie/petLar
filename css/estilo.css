@@ -1214,6 +1214,14 @@ section.galeria {
   margin: 0; /* Remove margem */
   max-width: 100%; /* Garante que não ultrapasse o container */
 }
+.card-galeria {
+  background: #ffffff; /* cartão branco por imagem */
+  padding: 8px; /* espaço interno para separar borda da imagem */
+  border-radius: 12px; /* cantos arredondados do cartão */
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+  display: block;
+}
+.card-galeria .item-galeria { border-radius: 8px; }
 
 /* Efeito hover - imagem cresce e sombra aumenta */
 .item-galeria:hover {
