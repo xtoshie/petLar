@@ -354,6 +354,35 @@ hr.video{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);  /* sombra original */
 }
 
+/* ===== Alinhar todos os botões à esquerda ===== */
+/* Força alinhamento à esquerda para chamadas à ação (ancoras e botões) */
+.botaoGaleria,
+.relatorio-anual,
+.transparencia,
+.fazer-doacao,
+.cadastro-voluntario,
+.cadastro-pet,
+.botao-doar,
+input[type="submit"].botao-doar,
+button[type="submit"],
+button[type="reset"],
+.download a {
+  display: inline-block; /* mantém aparência de botão mas alinhado */
+  margin-left: 0 !important; /* remove margens de centralização existentes */
+  margin-right: auto !important;
+  float: none !important;
+  text-align: left;
+}
+
+/* Em formulários, garantir que botões não fiquem centralizados por regras anteriores */
+form button[type="submit"],
+form button[type="reset"],
+form input[type="submit"] {
+  display: inline-block;
+  margin: 0 0 0 0 !important;
+}
+
+
 .relatorio-anual{
   display: inline-block;  /* Garante que o botão seja tratado como um bloco inline */
   background: linear-gradient(to right, #1f6fb2, #3aaed8); /* Gradiente azul, começando com um tom mais escuro e terminando em um tom mais claro */
@@ -1458,6 +1487,42 @@ section.fazer-doacao-card fieldset {
 section.fazer-doacao-card .botao-doar,
 section.fazer-doacao-card input[type="submit"].botao-doar {
   margin: 20px auto 0;
+}
+
+/* ===== Botão Voltar ao Topo (global) ===== */
+.back-to-top{
+  position: fixed;
+  left: 18px; /* alinhado ao lado esquerdo conforme solicitado */
+  bottom: 24px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #1f6fb2, #3aaed8);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+  font-size: 1.25rem;
+  line-height: 1;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+}
+.back-to-top.visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:focus, .back-to-top:focus-visible{
+  outline: 3px solid rgba(31,111,178,0.9);
+  outline-offset: 3px;
+}
+@media (max-width: 480px){
+  .back-to-top{ left: 12px; width:40px; height:40px; font-size:1rem; }
 }
 
 

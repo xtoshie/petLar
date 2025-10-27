@@ -87,9 +87,56 @@ PetLar/
 
 ---
 
-Como testar localmente (recomendado)
-- Recomendamos usar a extensão Live Server do Visual Studio Code para testar o site localmente. Após instalar a extensão, abra a pasta do projeto no VS Code, abra qualquer arquivo HTML dentro da pasta `html` e clique em "Go Live" (botão na barra de status). O Live Server irá servir os arquivos via HTTP e você poderá acessar, por exemplo:
-	- http://127.0.0.1:5500/html/index.html
+# 🐾 PetLar — Projeto (versão final)
+
+Status atual (26/10/2025)
+- Branch principal de trabalho: `develop` (últimos commits aplicados)
+- Versão a ser publicada: `v1.0.0` (tag criada e empurrada no final desta operação)
+
+Resumo das alterações implementadas nesta fase
+- Flow de Doação
+	- `html/doacao.html`: formulário de doação com validação e interceptação de submit.
+	- Persiste doações em `localStorage` e salva a última doação em `sessionStorage`.
+	- `html/sucesso_doacao.html`: página de confirmação que lê `sessionStorage.last_donation` e exibe o resumo.
+
+- Acessibilidade e navegação
+	- Skip-link adicionado em todas as páginas (posicionado corretamente dentro do `body`).
+	- Foco visível, contraste e pequenas melhorias a11y (scripts e CSS helpers).
+
+- Galeria e interface
+	- `html/galeria.html`: imagens colocadas em cartões (`.card-galeria`) com grid responsivo e lightbox.
+	- `javascript/lightbox.js` para visualização em modal.
+
+- Contato e botões
+	- `html/contato.html` corrigido (removido quadro azul, alinhamento das redes sociais)
+	- Padronização de botões: `.botaoGaleria`, `.botao-doar`, `.relatorio-anual`, etc.
+	- Regra CSS adicionada para alinhar botões à esquerda quando solicitado.
+
+- Utilitários
+	- `javascript/menu.js` e `javascript/footer.js` injetam header/footer em todas as páginas.
+	- Novo `javascript/backToTop.js` e classe `.back-to-top` no CSS — botão circular aparece no canto inferior esquerdo quando rolar e faz scroll suave até `#main-content`.
+
+Arquivos importantes alterados/ adicionados
+- HTML: `html/*.html` (várias páginas; alterações notáveis: `projetos.html`, `doacao.html`, `sucesso_doacao.html`, `contato.html`, `galeria.html`)
+- CSS: `css/estilo.css` (centro de estilos; moved/centralized inline CSS; adições de .back-to-top e regras de alinhamento de botões)
+- JS: `javascript/backToTop.js` (novo), `javascript/lightbox.js`, `javascript/menu.js`, `javascript/form-handler.js` (já existentes/atualizados)
+
+Checklist de status (conforme o TODO original)
+- [ ] Executar auditoria de acessibilidade (Lighthouse/axe) — pendente
+- [ ] Configurar CI (GitHub Actions) para checks — pendente
+- [ ] Adicionar build de produção (package.json + scripts) — pendente
+- [ ] Otimizar imagens e gerar WebP/AVIF — pendente
+- [ ] Gerar README final e checklist de submissão — ESTA ETAPA (concluída agora)
+- [ ] Criar CHANGELOG e versão semântica (v1.0.0) — vou criar a tag `v1.0.0` agora
+- [ ] Publicar site (GitHub Pages) — pendente
+- [ ] Melhorias de conteúdo e SEO básicas — pendente
+- [ ] Rodar testes básicos e validação HTML/CSS — pendente
+
+Como testar localmente (rápido)
+1. Abra a pasta do projeto no VS Code.
+2. Use Live Server (extensão) ou abra os arquivos HTML diretamente no navegador.
+	 - Exemplo: http://127.0.0.1:5500/html/index.html
+
 
 
 
