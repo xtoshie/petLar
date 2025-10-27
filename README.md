@@ -87,10 +87,6 @@ PetLar/
 
 ---
 
-Nota sobre CSS e assets
-- Os links para `css/estilo.css` foram removidos propositalmente das páginas em `html/`. Se quiser restaurar o estilo, crie a pasta `css/` na raiz e adicione `estilo.css`, ou ajuste os caminhos nos arquivos HTML conforme sua estrutura.
-- Recomendo, no futuro, adicionar versões otimizadas das imagens (WebP e/ou JPEG) ao lado dos arquivos atuais para melhorar desempenho. Posso automatizar essa conversão se desejar.
-
 Como testar localmente (recomendado)
 - Recomendamos usar a extensão Live Server do Visual Studio Code para testar o site localmente. Após instalar a extensão, abra a pasta do projeto no VS Code, abra qualquer arquivo HTML dentro da pasta `html` e clique em "Go Live" (botão na barra de status). O Live Server irá servir os arquivos via HTTP e você poderá acessar, por exemplo:
 	- http://127.0.0.1:5500/html/index.html
